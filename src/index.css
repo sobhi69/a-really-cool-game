@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+   margin:0 ;
+   box-sizing: border-box;
+} 
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/public/todo-background.jpg) ;
+  background-size: cover;
+  background-position: center center;
+  /* overflow: hidden; */
+  min-height: 100vh ;
+  font-weight: 700;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
+  text-align: center;
+  color: #b0cdff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 400px;
+  /* min-height:; */
+  text-align: center;
+}
+
+.input-user {
+  width: 80%;
+  border: none;
+  outline: none;
+  height: 27px;
+  padding: 0 5px;
+}
+
+
+
+.add-btn {
+  border: none;
+  width: 10%;
+  height: 27px;
+  /* background: transparent; */
+  color: #ac4c4c;
+  /* border: 1px solid #ac4c4c; */
+}
+
+
+.todo {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.9);
+  z-index: 5;
+
+}
+
+.todo input {
+  width: 330px;
+  outline: none;
+  border: none;
+  height: 27px;
+  padding: 0 5px;
+}
+
+.todo button {
+  height: 27px;
+  border: none;
+
+}
+
+.tasks {
+  min-height:80vh;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background: transparent;
+  color: #163469;
+  border-radius: 20px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.checked {
+  text-decoration:line-through
+}
+
+.tasks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  /* border: 1px solid ; */
+  margin: 15px 0 ;
+  background: #eeeeee7b;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+@media (max-width:767px) {
+  .input-user {
+  
+    width: 60%;
+  }
+  .task {
+    width: 60%;
+  }
+  .edit-input {
+    width: 200px;
+  }
+  .todo input {
+    width: 70%;
+  }
+}
